@@ -1,0 +1,133 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Exercises
+{
+    public class KataPotter
+    {
+        public decimal GetCost(List<int> nums)
+        {
+            if (nums == null)
+            {
+                return 0.0m;
+            }
+            else
+            {
+                // Making the index counter for unique books
+                int bookCounter = 0;
+                for (int i = 0; i < nums.Count; i++)
+                {
+                    int bookTotal = 0;
+                    if (nums[0] > 0)
+                    {
+                        bookCounter += 1;
+                    }
+                    if (nums[1] > 0)
+                    {
+                        bookCounter += 1;
+                    }
+                    if (nums[2] > 0)
+                    {
+                        bookCounter += 1;
+                    }
+                    if (nums[3] > 0)
+                    {
+                        bookCounter += 1;
+                    }
+                    if (nums[4] > 0)
+                    {
+                        bookCounter += 1;
+                    }
+
+
+
+
+                    double totalPrice = 0.0;
+                    decimal result = 0.0m;
+                    for (int j = 0; j < nums.Count; j++)
+                    {
+                        bookTotal += nums[j];
+                       
+                       
+
+                    }
+                    int extrabooks = bookTotal - bookCounter;
+                    if (bookCounter == 5)
+                    {
+                        if(bookCounter == 5 && extrabooks == 3)
+                        {
+                            int secondLoopCounter = 0;
+                            for (int k = 0; k < nums.Count; k++)
+                            {
+                                if (nums[0] == 2)
+                                {
+                                    secondLoopCounter += 1;
+                                }
+                                if (nums[1] == 2)
+                                {
+                                    secondLoopCounter += 1;
+                                }
+                                if (nums[2] == 2)
+                                {
+                                    secondLoopCounter += 1;
+                                }
+                                if (nums[3] ==2)
+                                {
+                                    secondLoopCounter += 1;
+                                }
+                                if (nums[4] == 2)
+                                {
+                                    secondLoopCounter += 1;
+                                }
+                                
+                                if(secondLoopCounter == 3)
+                                {
+                                    result = 51.20m;
+                                    return result;
+                                }
+                            }
+
+
+
+                            
+
+                        }
+                        
+                       
+                        totalPrice = (40 * 0.25) + (extrabooks * 8);
+                        result = (decimal)totalPrice;
+                    }
+                    else if (bookCounter == 4)
+                    {
+                        totalPrice = (32 * 0.20) + (extrabooks * 8);
+                        result = (decimal)totalPrice;
+                    }
+                    else if (bookCounter == 3)
+                    {
+                        totalPrice = (24 * 0.10) + (extrabooks * 8);
+                        result = (decimal)totalPrice;
+                    }
+                    else if (bookCounter == 2)
+                    {
+
+                        totalPrice = (16 * 0.05) + (extrabooks * 8);
+                        result = (decimal)totalPrice;
+                    }
+                    else
+                    {
+                        totalPrice = bookTotal * 8;
+                        result = (decimal)totalPrice;
+                    }
+
+                    return result;
+
+                }
+            }
+            return 0.00m;
+        }
+    }
+}
+

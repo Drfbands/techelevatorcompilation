@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewData["Title"] = "Fibonacci";
+}
+
+<h2>Fibonacci</h2>
+
+<nav>
+    <ul>
+        <li><a asp-controller="Home" asp-action="Fibonacci" asp-route-max="20">20</a></li>
+        <li><a asp-controller="Home" asp-action="Fibonacci" asp-route-max="50">50</a></li>
+        <li><a asp-controller="Home" asp-action="Fibonacci" asp-route-max="100">100</a></li>
+    </ul>
+</nav>
+
+@{
+
+    ViewData["Title"] = "Fibonacci";
+    int number = Convert.ToInt32(ViewData["max"]);
+
+    int num1 = 0;
+    int num2 = 1;
+    int sum = 0;
+    while (sum <= number)
+    {
+        sum = num1 + num2;
+        num1 = num2;
+        num2 = sum;
+        if (sum == 1)
+        {
+            <li style="color: #228b22">@sum</li>
+        }
+        else if (sum + num1 >= number && sum <= number)
+        {
+            <li style="color: #b71b1b">@sum</li>
+        }
+        else if (sum <= number)
+        {
+            <li>@sum</li>
+        }
+    }
+}

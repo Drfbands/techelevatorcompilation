@@ -1,0 +1,54 @@
+﻿@model IList<MVCModels.Web.Models.Product>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>All Products</h2>
+
+
+
+@{
+    foreach (var prod in Model)
+    {
+
+  <div class="outer">
+    <span class="pic"> <img class="pic" src="~/images/@prod.ImageName" /> </span>
+   
+  <div class="data">
+ <span>@prod.Name</span>   <span>@prod.IsTopSeller</span>
+
+
+<p>@prod.Manufacturer</p>
+<p>@prod.Price</p>
+<p> @prod.WeightInLbs</p>
+<p>@prod.AverageRating</p>
+    <br />
+
+</div>
+</div>
+    <style>
+        .pic {
+            clear:left;
+            float: left;
+            heigth: 150px;
+            width: 150px;
+            margin-right:30px;
+            
+            flex-direction: column;
+        }
+     .data {
+            float: left;
+        
+     }
+
+      
+
+    
+    </style>
+
+
+    }
+}
+
+

@@ -1,0 +1,153 @@
+// AlienWeightModel.cs
+
+
+using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Web;
+
+namespace SSGeek.Web.Models
+{
+    public class AlienWeightModel
+    {
+        /// <summary>
+        /// The weight to convert.
+        /// </summary>
+        [Display(Name = "Enter Your Weight")]
+        public int Weight { get; set; }
+
+        [Display(Name = "Select Planet")]
+        public string Planet { get; set; } 
+
+        public double GetConvertedValue()   
+        {
+            // pick a base unit to convert everything to
+            Dictionary<string, double> conversionForPlanet= new Dictionary<string, double>()
+            {
+                {"Sun", 27.95 },
+                {"Mercury", 0.37 },
+                {"Venus", 0.90 },
+                {"Earth", 1.0},
+                {"Moon", 0.17},
+                {"Mars", 0.38},
+                {"Jupiter", 2.65},
+                {"Saturn", 1.13},
+                {"Uranus", 1.09},
+                {"Neptune", 1.43},
+                {"Pluto", 0.04}
+
+            };
+
+
+            double endingValue =  Weight * conversionForPlanet[Planet];
+
+            return endingValue;
+        }
+
+        /// <summary>
+        /// Provides the list of Units for conversion.
+        /// </summary>
+        public static List<SelectListItem> Planets = new List<SelectListItem>()
+        {
+            new SelectListItem() { Text = "Sun"},
+            new SelectListItem() { Text = "Mercury" },
+            new SelectListItem() { Text = "Venus"},
+            new SelectListItem() { Text = "Earth"},
+            new SelectListItem() { Text = "Moon"},
+            new SelectListItem() { Text = "Mars"},
+            new SelectListItem() { Text = "Jupitar"},
+            new SelectListItem() { Text = "Saturn"},
+            new SelectListItem() { Text = "Uranus"},
+            new SelectListItem() { Text = "Neptune"},
+            new SelectListItem() { Text = "Pluto"},
+        };
+
+
+
+
+
+
+
+AlienWeight.cshtml
+@model  AlienWeightModel
+@{
+    ViewData["Title"] = "Alien Weight";
+}
+
+
+
+
+
+
+<section class="centeredPanel">
+    <h2>Alien Weight Calculator</h2>
+
+    <form asp-controller="calculators" asp-action="AlienWeightResult" method="get">
+        <div>
+            <label asp-for="Planet"></label>
+            <select asp-for="Planet" asp-items="AlienWeightModel.Planets"></select>
+        </div>
+
+        <div>
+            <label asp-for="Weight"></label>
+            <input type="number" asp-for="Weight" placeholder="enter a number" />
+        </div>
+
+        <div class="sub">
+            <input type="submit" value="Calculate Weight" />
+        </div>
+    </form>
+
+</section>
+
+<style>
+    .sub{
+        margin-left: 200px;
+    }
+</style>
+
+
+
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+AlienWeightResult.cshtml
+
+@model AlienWeightModel
+
+@{
+    ViewData["Title"] = "AlienWeightResult";
+}
+
+
+<section id="calculatorResult" class="centeredPanel">
+
+
+    <img src="~/images/@(Model.Planet.ToLower()).jpg" />
+        
+
+    <span class="text"> If you weighed @Model.Weight on planet earth. You would weigh @Model.GetConvertedValue() lbs on planet @Model.Planet </span>
+
+</section>
+
+<style>
+    .text{
+       float:left;  
+    }
+</style>
+

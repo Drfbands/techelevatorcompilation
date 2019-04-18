@@ -1,0 +1,39 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<h2>Product Page</h2>
+
+<span class="pic"> <img class="pic" src="~/images/@Model.ImageName" /> </span>
+
+<div class="data">
+    <span>@Model.Name</span> <span>@Model.IsTopSeller</span>
+    <p> By: @Model.Manufacturer</p>
+    <p>@Model.AverageRating</p>
+    <p> PRICE: @Model.Price</p>
+    <p>Weight: @Model.WeightInLbs</p>
+    <p> Descripion: @Model.Description</p>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+</div>
+
+<style>
+
+    .pic {
+        float: left;
+        margin-right: 5px;
+        margin-bottom: 15px;
+    }
+
+    .data {
+        float: right;
+        padding-top: 40px;
+        
+    }
+</style>

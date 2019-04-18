@@ -1,0 +1,39 @@
+﻿@model IntroToRazor.Web.Models.FizzBuzz
+@{
+    ViewData["Title"] = "FizzBuzz";
+    int number = Convert.ToInt32(ViewData["number"]);
+}
+
+<h2>FizzBuzz</h2>
+<!-- Example navigation for part 2 of exercise. -->
+<nav>
+    <ul>
+        <li><a asp-controller="Home" asp-action="FizzBuzz" asp-route-number="20">20</a></li>
+        <li><a asp-controller="Home" asp-action="FizzBuzz" asp-route-number="50">50</a></li>
+    </ul>
+</nav>
+<p>Our sum is: @Model.FizzOutput </p>
+@{ foreach (var item in Model.FizzOutput)
+    {
+
+        <p class="@item"> @item </p> <!-- You pass in the output variable to the class. So the class is the output value and changes on each iteration.-->
+    }
+}
+
+
+
+
+<style>
+    .Fizz{
+        color: blue;
+    }
+
+    .Buzz{
+        color: red;
+    }
+
+    .FizzBuzz{
+        color: #228b22;
+        font-size: 2em; /*the 2em means twice the size of its parent element*/
+    }
+</style>

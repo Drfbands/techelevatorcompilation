@@ -1,0 +1,35 @@
+Growth of company: (You want to see growth somewhere)
+1.) Revenue growth of month over month or yearly.
+2.) Growth in users of the product 
+3.) Growth in downloads of the product 
+
+
+I would want to know how they are getting the product out there: (If it is users you want to see fast growth, companies you need a pipeline and patience, but ability to get big ones. Must have a dedacated sales team to do it.) 
+1.) Are they targeting individuals or insurance companies 
+2.) How are hey letting people know about the app if it is individuals 
+3.) If they are targeting companies I would look into if they have any major 
+    companies they are partnering with. IF So....
+4.) How do do they sell to companies, and how long is that sales process from contact to close on avg. 
+
+
+What are they planning on doing with the company: (Your looking for a fast growing comapny that you could be apart of when they sell, and you have equity in the company)
+1.) Are they looking to sell and when (If there not looking to sell within a year or 2, you will probably be gone by then. Any equity you have in the company you lose when you leave it. 
+2.) If they are planning to sell soon then ask if they give any equity to developers, and how much?
+3.) If they are planning to sell ever? Ask who they would see as a potential buyer? Comapnies get bought by other large companies. You can't really sell them to other people because there to expensive. (You want them to have some answers here that make sense.) 
+
+
+Random: 
+1.) I would ask about the php migration and why? 
+2.) I would wonder with a product that is very specific to car wrecks. People in general don't buy prevention or anticipate accidents happening. 
+    so they wouldn't be very likly to really care about this app until after they got in a car wreck. I would wonder how they get people to download there 
+app after a wreck, or how do people even know there app exists at the time they need it. 
+The hard part about the app is its kind of a one time use thing. Even for the worst drivers maybe 2 or 3 times a year they would use. 
+3.) How do they get paid off of this app? Do the dealers pay them? users? How many dealers are even on the app to quote the accidents? 
+4.) How much runway they have? If they have ever taken investment? Are they profitable without the investment money? 
+ These are the questions where you want to make sure they are not going to go out of business in the next year.
+
+
+After this, it is really about are they good for a Junior Developer for the next 14 - 24 months, and can they help transition you from a junior developer to mid level developer. After that, all the other normal questoins that you have with any other company. 
+
+
+

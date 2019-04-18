@@ -1,0 +1,49 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Exercises
+{
+    public class KataFizzBuzz
+    {
+
+        public string FizzBuzz(int num)
+        {
+            string stringnum = num.ToString();
+
+            if (((num % 3 == 0 && num % 5 == 0 && num != 0) && num < 100) || stringnum.Contains("3") && stringnum.Contains("5") && num < 100)
+            {
+                return "FizzBuzz";
+            }
+                if (((num % 3 == 0 && num != 0) && num < 100) || stringnum.Contains("3") && num < 100)
+                {
+                    return "Fizz";
+                }
+                if (((num % 5 == 0 && num != 0) && num < 100)|| stringnum.Contains("5") && num < 100)
+                {
+                    return "Buzz";
+                }
+
+                if (num > 0 && num < 100)
+                {
+                    string value = num.ToString();
+                    return value;
+                }
+                if (num <= 0 || num >= 100)
+                {
+
+
+                    return "";
+                }
+
+
+
+                return "";
+            }
+
+
+        }
+    }
+

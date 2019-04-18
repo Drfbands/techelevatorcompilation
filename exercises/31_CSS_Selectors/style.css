@@ -1,0 +1,143 @@
+:root {
+    --top-row-height: 120px;
+    --gutter: 20px;
+    --blue: #00adee;
+    --light-blue: rgba(0, 173, 238, 0.4);
+    --green: #8cc36f;
+    --light-green: rgba(170, 239, 135, 0.8);  
+    --bg-color: rgba(192, 192, 192, 0.1);
+    --subheading: rgba(0, 0, 0, 0.6);
+  }
+  
+  * {
+    box-sizing: border-box;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+  }
+  
+aside {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  position: relative;
+  height: 100%; 
+  float: left;
+  display: fixed; 
+  border-right: 1px solid  rgba(0, 173, 238, 0.4);
+  margin-right: 18px;
+}
+
+aside img {
+  width: 150px;
+  height: 150px; 
+  margin-left: 20px;
+}
+
+aside nav {
+  text-decoration: none;
+}
+
+aside nav ul {
+  list-style-type: none;
+  margin:10px;
+ padding-right: 45px;
+
+}
+
+aside nav ul li{
+
+  border-bottom: 1px solid  rgba(0, 173, 238, 0.4);
+  padding-bottom: 7px; 
+  margin-top: 5px;
+  text-align: center;
+
+  
+}
+aside nav ul li a{
+ color:#00ADEE;
+ text-decoration: none;
+ padding:8px;
+
+
+ 
+
+
+ 
+}
+main{
+  Background-Color: rgba(192, 192, 192, 0.1);
+  border-left: 1px solid  rgba(0, 173, 238, 0.4);
+  
+}
+
+main header img {
+  height: 150; 
+  width: 150; 
+}
+
+main header p {
+  visibility: hidden; 
+}
+main img {
+  width: 200px;
+  height: 150px; 
+  padding-top: 5px;
+  margin: -15px;
+  border: 5px;
+}
+
+main > img {
+  width: 1000px;
+  height: 300px;
+  margin: -15px;
+  margin-bottom: 30px;
+  
+}
+
+#what-we-do{
+  display: inline;
+  width: 28%;
+  float: right; 
+  padding-top: 15px;
+  padding-left: 15px;
+ 
+}
+ #our-work{
+  display: inline;
+  width: 28%;
+  float: right; 
+  padding-top: 15px;
+  border-right: 1px solid rgba(170, 239, 135, 0.8);
+  padding-left: 15px;
+  
+  
+
+ }
+ 
+ #contact-us {
+  display: inline;
+  width: 28%;
+  float: right; 
+  padding-top: 35px;
+  border-right: 1px solid rgba(170, 239, 135, 0.8);
+  margin-bottom: -100px;
+  padding-left:4px;
+}
+
+section div h2 {
+  color: #8CC36F;
+}
+
+footer div p {
+  visibility: hidden; 
+}
+footer div h3{ 
+  visibility: hidden; 
+}
+footer div div img {
+  visibility: hidden; 
+}
+
+footer p {
+  padding-left: 280px;
+  margin: -78px;
+}

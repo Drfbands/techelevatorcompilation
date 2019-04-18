@@ -1,0 +1,93 @@
+
+<template>
+<div class="shopping-list">
+    <ul>
+  <li v-for="item in items" v-bind:key="item.id" v-bind:class="{'completed' : item.completed}" v-on:click="changeStatus(item.id)" v-on:mouseover="changeHighlight(item.id)">
+    {{ item.message }} <i class="far fa-check-circle" v-bind:class="{ completed: item.completed }"></i>
+  </li>
+</ul>
+  </div>
+</template>
+
+<script>
+
+export default {
+name: "shopping-list",
+  data(){
+        return {
+          items: [
+  { id: 1, message: '17 Quesaritos from Taco Bell', completed: false },
+  { id: 2, message: 'Sriracha', completed: false },
+  { id: 3, message: 'SPAM', completed: false },
+  { id: 4, message: 'Doritos', completed: false },
+  { id: 5, message: 'Archway Farms Oatmeal Cookies', completed: false },
+  { id: 6, message: 'Twinkies', completed: false },
+  { id: 7, message: 'Mountain Dew Baja Blast', completed: false },
+  { id: 8, message: 'Evian Water', completed: false },
+  { id: 9, message: 'Goldfish', completed: false },
+  { id: 10, message: 'Shinyu Black Label Ramen', completed: false }
+    ]
+        }
+        }
+        ,
+        methods: {
+  changeStatus(id) {
+    const arrIndex = this.items.findIndex((item) => item.id == id);
+    this.items[arrIndex].completed = !this.items[arrIndex].completed;
+}
+}
+
+}
+
+</script>
+
+<style>
+.shopping-list {
+    width:450px;
+    background: #fff;
+    margin: 50px auto;
+    font-family: 'Roboto Condensed', sans-serif;
+    border-radius: 10px;
+}
+h1 {
+    background:#f2f2f2;
+    color:#5c8578;
+    padding:10px;
+    font-size:24px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+ul {
+    list-style-type: none;
+    margin:0px;
+    padding:0px;
+}
+li {
+    font-size: 24px;
+    border-bottom:1px solid #f2f2f2;
+    padding:10px 20px;
+}
+li:last-child{
+    border:0px;
+}
+li.completed {
+    text-decoration: line-through;
+    color:darkgrey;
+}
+
+li.hover {
+    color:darkgrey;
+}
+
+i.far.fa-check-circle { 
+    float:right;
+    color: darkgray;
+}
+
+i.far.fa-check-circle.completed {
+    color:green;
+}
+</style>

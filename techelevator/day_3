@@ -1,0 +1,213 @@
+{
+quiz overview:
+
+constant - Program will fail if you try to change a constant
+- You use all uppercase on the name of a const. Example: const double PI = 3.14;  (PI is all uppercase)
+
+decimal cast = decimal balance = (decimal)3.12;   - (THis is how you cast with thte parenthesis before, 90% of the time when you want to cast there is something wrong with your logic.)
+or 
+decimaL BALANCE = 3.12M; (M = a shortcut for casting)
+
+
+For double a = 7/2;  answer = 3:
+Reasoning:
+ double = THe storage data type. Only argues if it doesn't work
+ 7 is an int 
+ 2 is an int 
+ - This step is for processing. The declaring double step is for storing. 
+ 
+ (double)7/2 would work. - Because the cast sends the data type to the processor. 
+ - every other row things you use even or odd modulous operator. 
+} 
+
+
+{ 
+behavior - will manipulate data and transform it into something valuable.
+
+Behavior in our applicatoins is all about running certain blocks in our apllication. 
+
+int length; = 
+int length = 0; is an expression
+length = 5 + 1 = is a statement. 
+5 +1 is still a expression. But the whole thing is a statement. 
+Expressions are the blocks that make up statements. 
+int area = length * width; 
+= expression 
+length * width = expressoin
+whole thing = Statement 
+
+{
+code blocks - are like paragraph's. 
+Code that needs to work togetehr you would put together in a block. 
+you use curly brackets to make code blocks. It tells that the code is all related to each other and we want to treat it as a block.
+functions are called methods in csharp. Methods are the behaviors. 
+Methods can only return a single value or item. You can take many values as input, but only return one value. 
+
+Method signiture - the different parts of the method declaration
+1.)The first part of a method is a access modifier:
+public - anyone 
+private - only people in the same code file 
+protected - allows the parent file and its children access that. This has to do with inheritance. 
+void - says do a bunch of stuff but don't return anything. (You would use it if maybe you wanted to update a section in the database. But you don't want it to do anything)
+- Void exist but try not to use it. You want to use maybe a bool that says to use bool to see if it works. 
+
+2.)return type: 
+- Methods can send back a single value. SO we have to know what type the method is going to return back to us. 
+
+3.) Name - Should call it something descriptive of what it does. 
+- Metods are in pascal or title case. Every word id upper case. Example CalculateArea. 
+4.) Parameters - The data or values to set for the values. Parameters are statements here.
+you have to know two things with parameters:
+A.)Type 
+B.)Name 
+- seperated by commas
+Example:
+
+public int CalculateArea(int lengthOfWall, int width) {
+         int area;
+         
+         area = lengthOfWall X width;
+          return area;
+
+}
+// You don't need to declare lengthOfWall and Width inside of your method because you declared them 
+in your parameters. But you do with area. 
+
+To call it you save it to a variable: 
+
+int myArea = CalculateArea(4, 2);
+ console.WriteLine(myArea)
+// $ 8. 
+
+
+- you can manipulate data within a method adn change its type, as long as when it gets to the return type
+that it matches the signiture type. 
+}
+
+{
+    dependencies 
+    - Are like books. 
+    - We reference several of them in are code. Kind of like a research paper. 
+
+
+}
+
+
+
+{
+    Null;
+    - you can use null to see if a value has been assigned to a variable. 
+    - String has methods called is IsNull, and IsEmpth
+
+    operators - Allow us to compare values. 
+    - They can be a variable vs a variable. or a hard coded value vs a variable etc. 
+   ! - This is sometimes called the bang character. 
+
+   - Usually when you use boolean variables you put a verb in front of it:
+   isPassing
+   hasValue 
+   areMarbles 
+
+   expressions get evaluted first on the right side of teh variable. Then assigned to the variable on the left. 
+   
+    Logical operators - Are about comparing the true and false of expressions. 
+    bool isPassing = foo >= 2);
+    bool isPerfect = foo == 3; 
+    - Here you can ask are they both passing and perfect. one or the other. none. 
+    - Looking and values and compare them. 
+
+    TO make a switch. 
+    bool a = false; 
+    a = !a; 
+    - swithes the switch to on or off.
+
+
+    bitwise or logical operator. Bitwise or is a comparison to see if something is different. 
+    A^B
+    - This may come up on interview questions. You wont use it much in coding. 
+
+    if condition:
+    if - is its own block 
+    else - is its own block
+    - The else clause is optional. 
+    - If you are not doing anything on the else clause, you don't even need to have it. 
+
+
+true and false are values. This is not the string true or false. 
+So you can do:
+if (true) {
+    return true; 
+}
+
+- That true doesn't need to be in a string. It is a value. 
+
+can also write: 
+if (1==2){
+    return true;
+}
+
+return false
+}
+
+- This is an else statement but you dont even have to write else. This is terrible style. 
+- He says you will use both this way and the actually else way. 
+
+
+
+{
+
+ ** return number > 5; 
+ - This will give you both a true and false return. This cleans up your code. This is for a boolean. 
+ - Because a boolean expression gets evaluted.
+}
+
+
+{
+    ternary operator - is putting an if else on one line. 
+    - has to have the else statement 
+    - This is for short fast if else statements 
+    - it is always bool ? true : false 
+    - number == 3 ? "fizz" : ""; 
+
+    - can use a ternary for 3 cases. 
+    return number == 3 ? "fizz" : number == 5 ? "buzz" : "";
+    - You can go as long as you want with ternary. As long as they are bools. 
+    - He only goes to 2 on ternary. Sometimes 3. Not much more than that, because it is hard to read. 
+}
+
+
+
+bool isEven = number % 2 == 0;  (for even, odd, or multiple of 2)
+- So if even it is true. 
+is a multiple of 5 = number % 5 == 0; 
+- To see if it is a multiple of, you see if there is a remander of that number. 
+
+
+
+
+
+
+} 
+
+
+
+
+{
+    Its all integrated. 
+    Watching game and doing stuff 
+    driving amd podcasts. 
+    - This is how they do it all. This is what you have to get down. 
+    only way to make the day good. 
+
+  
+    - You can see all of the things that are possible. And the style problems can people can and want to do. 
+    - You see how you really have to know whats going on and what you can and can't do to debug code. Bad style can be impossible. 
+    - You need to get down the no else statement and the ternary operator and use it. 
+    - Also the block syntax on a method with if else statements in it. 
+}
+
+
+
+
+
+{}

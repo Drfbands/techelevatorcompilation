@@ -1,0 +1,202 @@
+
+Day 2 lectures:
+
+git pull upstream master - for exercises
+git pull origin master - for lectures 
+git push origin master - turn the homework back in. 
+
+{
+    Ouiz site 
+    socrates 
+    pass dotnetpgh 
+}
+
+{ 
+
+    Quiz - 
+    ~ starts in your home directory. So all of the folders before your home directory you cannot access with ~. It starts with your folder being 
+    the root. 
+    - If you want absolute path from the root. Use the first file. Example /a/b/brian_jones
+
+    init - sets up the program on your machine and gets your username and status. Sets it up on your machine and the configuration set up. 
+    git init - sets up git on your machine and lets you put in your credientials to be saved. intitalizes and configures.
+
+}
+
+{
+git 
+status = viewing what your doing
+add = puts files and folders in staging area 
+commit = saves a copy on your local machine 
+git push = saves a copy on the server 
+orgin - pointer varaible for where you are pushing to online
+master = branch name - if not master push to the branch you want. 
+
+git status  (Must know the directories you are in)
+if you see 
+../file_name - That means that the file needs commited but it is one folder up. 
+- You cannot grab the file calling an absolute path from the folder your in. You need to either cd ../ and then git add the file. Or git -a will add from previous paths. 
+- If you delete a file it will show up in git status until you git add that you deleted the file.
+git add -A  = says add everything available in the repository. Meaning all files from root on down.
+ The git add filename - is a relative path, and will not add the file if it is up one folder and you try to add it from the child folder. It will show in the status but wont add.
+ git add . = THe file you in and on down so you you still would not get the parent directoy 
+ git add .. - would get the parent directory on down 
+ git add -A - gets the whole repository
+}
+
+
+
+
+Day 2 Notes: 
+- c# comes from the ++ in C++ if you put the ++ together. THat is the parent language for c#
+- Framework - Collection of code that computers can access to build a specific type of application. 
+Frameworks provide access to these conviences through class libraries
+- Library - Collectiom of code files. 
+.net core = Next version of .net. It is open source
+
+classes are oo progarmming and we ask the objects for the information that we want. Each object contains its own informatoin and you interface with objects. 
+
+- THe whole point of the class is to become self sufficient. Learn some but be able to find and learn. Read documentation.= integrate, learn whats going on.
+}
+CLR 
+- Takes the byte code after compiled and tells the computer what to do. This the same as the jvm. This allows us to abstract the underlying hardware from the code we write.
+- This is the thing that makes programs run on different operating sysems. CLR talks to all the operating systems. There is a different clr for each operating system. 
+- From the interface on up it is the same. Underground at the clr level it is different. This is what makes c# portable. Its code is a virtual machine. It is a translator. 
+}
+{
+Ide:
+- You need to learn how to organize files in the ide that are large. 17k and stuff like that. 
+- You can drag your mouse over sytax errors in visual studio, and get options on what could be wrong. Like a spell check wiht options
+.net is like sourceforce for ruby more than rails. 
+click on the line number  highlights the line. ctr + D will duplicate the line. (Look into hot keys in visual studo)
+}
+
+{
+Visual Studio
+- all the librarys you start with are coming from.net 
+- system.names  are all sub libraries of the system classes. So it is a orgainization structure. 
+- enter auto corrects 
+- if underlined green. Its not wrong it just means there can be more with it. Get it if you have a unused variable or something like that.
+}
+
+{
+all C# code lives in a class. All classes have name space. 
+Main - Is the first line where your program runs at. 
+// comments - Many times you will write out comments on on all places before you make the code. Then you fill the comments in before it is going on.
+- WHen you start to do interesting things in code. It is a good idea to put that interesting thing in a comment
+
+Console.WriteLine(); - i the puts or print statement
+Console.ReadKey(); - THis is what you need to keep the concole window open until you hit a button, or else it wll close.
+- That window is just like one line of a shell. Execept it is not continous. test.txt
+}
+
+{
+    Programs are broken down into behavior and data. 
+    Data - is the info are program will store 
+    Behavior - Will manipulate and move the data
+}
+{
+    Data:
+    Variables:
+    - What holds are data. 
+    - Data type. (10 - This where we think 10. But in binary 10 is 2. In hexidecimal it is different. So it is the translations to the lower level are the
+    reasons why type is so important. Type is the reason a lot of people hate javascript. Because you can declare it a type and change it later 
+    and it jsut lets you.  )
+    - variables are camel case. first letter is small.
+    functions have different naming conventions then variables. The first letter being upper case is for functions. 
+    Naming conventions make code more readable. 
+
+    Bool - isTomHappy;  
+    - Bools start with is a lot. That is a datatype convention. That is a very smart convention. 
+    bool - is one of the most important data types there are. Because they check what a behavior is and does, then you do things based on the value of the bool. 
+
+    
+    - In c# we end the line with a ;. In javascript you do to, but you can leave it off. It is up to you.
+
+    declare = int numberOfStudents; 
+    assignment = numberOfStudents = 16; (only data type at declaration)
+    declare and assign = int numberOfStudents = 16;
+
+    types:
+    bool 
+    int 
+    float - Can end up with rounding errors in the floating math 
+    double - more precision in double. More bytes. Usually used for financial transaction. Are a little larger than an int. 
+    long - Fallen out of favor some. This a big int, double the size. Now with 64 bit processors ints are usually big enough. 
+    strings 
+
+    - unless you put a f after the number even if you decalred a float it will be a double by default unless it is size double. 
+    - float num 12.3 = double 
+    - float num 12.3f = float. - Will decalare the memory space of a float for you now because you have the f in there. 
+
+    - the above are primitive variables where you know the size of the variables in memory before you sset them. 
+    - Strings are not primitive variables. They are reference variables becuase you can make big or small strings. 
+
+    defaulting data types:
+    floats are doubles unless you have f after the number. 
+    2 / 5 even declared doubles will be 2. Becuase you need to have 2.0 after one of the values even if the types are right. 
+    - You could also add a d after the 5d/2 is like putting the 5 after. 
+
+    - You want to use a decimal any time you are dealing with peoples money. 
+
+}
+{
+    Behavior:
+    Expression- are lines of code that can be evaluated to a result. So data plus a method is an expression.
+    2 + 2 is an expression. 
+
+      % = modulous. To find out if a number is even or odd. 
+    - We use modulus the most on testing if something goes into it, and odds and even. If it is odd if you divide by 2 it will be 1. 
+    - If it comes back to 0 it is even. This is used more than you think to figure out if your numbers are even or odd. This is the easiest way to do them.
+
+    math vs computers
+    Math = 121 - 27 = difference  (you work right to left and then get the answer.)
+    Computers difference = 121 - 27 (You do everything after the equals and then assign it on the right. Thats why this looks wierd.)
+    - Anytime you create data, you need a variable to hold that or else it goes into the either. So you need a variable to hold the data of a process. 
+    - A variable is the only way to hold information in a computer. You make your variables first to remember the outcomes of your proesses. 
+    - They are more aboiut remembering than even passing. This is huge for when you read code. Probably your biggest thing. 
+}
+
+{
+    c#
+    - writeline = gives you the line plus a newline or carrage return 
+    - write = no newline. SO data will jumble togetehr on multiple returns. 
+    3.1446f = it knows it can fit in a double, but you must put f in there so that it overrides it to a float. 
+}
+
+{overwritw a variable already set with more behavior:
+string fullname = "Brian Jones";
+fullname = fullname + " Esquire";
+Console.WriteLine(fullname);  //Brian Jones Esquire
+}
+
+
+
+
+{
+    Casting:
+    - You cannot assign a double to an int even if it fits because the computer does not let it do that. It only looks at the type not the number.
+    - Even if double = 6. You can't even set that to a int even if it will have no data loss. This is different than c++. 
+    - The reason is because the state of the double may be 6 now, but it is a variable and it may be 6.4 at another type. So your never doing it.
+    - You can only cast if there is never ever going to be data ever lost in any case.  so a int can become a double.
+    
+    casting in c# is alittle different. casting = You can take a variable andand treat it as a larger type.
+    int y = 2;
+    double x = 2.5;
+    double total;
+    total = (double)y * x; 
+
+}
+
+
+
+
+
+{
+    Random Learning
+    angular, react, and vue are all "component" javascript. There all very similar 
+    Javascript is all front end. Except you can use node for the backend server and it will process as backend code. But you need the node server to do this
+
+    Koitlin - Is for hardware or android phones. It is the java library you are using for phones now.
+    Have to get better at storing process data in variables and knowing this before hand.
+}
